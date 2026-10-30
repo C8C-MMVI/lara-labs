@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172b4d;
+  background: #f3f6fb;
+  font-synthesis: none;
+}
+
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+
+.container {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.page-header {
+  background: linear-gradient(120deg, #123c69, #1f78a8);
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px #17365d20;
+}
+
+.eyebrow { font-size: 12px; letter-spacing: 2px; font-weight: bold; opacity: .85; }
+h1 { margin: 8px 0; font-size: clamp(28px, 4vw, 38px); }
+.subtitle { margin-bottom: 0; color: #e8f3ff; }
+.panel {
+  background: white;
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px #17365d0a;
+}
+h2 { margin-top: 0; font-size: 19px; }
+.student-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+label { display: flex; flex-direction: column; gap: 7px; font-size: 13px; font-weight: bold; }
+input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 11px;
+  outline-color: #2878b8;
+}
+.form-actions { display: flex; align-items: end; gap: 8px; }
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 15px;
+  color: white;
+  background: #1769aa;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover { filter: brightness(.93); }
+.secondary { background: #e8eef5; color: #23415f; }
+.table-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid #e7edf4; }
+th { color: #36516d; background: #f6f9fc; }
+.actions { white-space: nowrap; display: flex; gap: 6px; }
+.small { padding: 7px 10px; font-size: 12px; }
+.danger { background: #c0394b; }
+.empty { text-align: center; color: #718096; padding: 24px; }
+.message { padding: 12px 15px; border-radius: 8px; }
+.success { background: #e7f7ed; color: #17663a; }
+.error { background: #fff0f0; color: #a3212e; }
+footer { text-align: center; color: #728096; padding: 12px; font-size: 12px; }
+
+@media (max-width: 760px) {
+  .student-form { grid-template-columns: 1fr; }
+  .page-header { padding: 22px; }
+  .panel { padding: 16px; }
+}
+
